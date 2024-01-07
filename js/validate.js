@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var errorMessages = '';
 
-        errorMessages += checkEmptyField(firstname, 'Voornaam');
-        errorMessages += checkEmptyField(name, 'Naam');
-        errorMessages += checkEmptyField(username, 'Gebruikersnaam');
+        errorMessages += checkEmptyField(firstname, 'voornaam');
+        errorMessages += checkEmptyField(name, 'naam');
+        errorMessages += checkEmptyField(username, 'gebruikersnaam');
         errorMessages += checkEmail(email);
         errorMessages += checkPassword(password);
-        errorMessages += checkEmptyField(repeatpassword, 'Herhaal wachtwoord');
+        errorMessages += checkEmptyField(repeatpassword, 'herhaal wachtwoord');
         errorMessages += checkPasswordMatch(password, repeatpassword, 'Je wachtwoorden komen niet overeen.');
-        errorMessages += checkEmptyField(address, 'Adres');
+        errorMessages += checkEmptyField(address, 'adres');
         if (state === 'Kies een provincie') {
             errorMessages += 'Provincie is vereist.<br>';
         }
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function checkPassword(password) {
         if (password === '') {
-            return 'Het veld Wachtwoord is vereist.<br>';
+            return 'Het veld wachtwoord is vereist.<br>';
         } else if (password.length < 7) {
             return 'Het wachtwoord moet minstens 7 tekens lang zijn.<br>';
         }
